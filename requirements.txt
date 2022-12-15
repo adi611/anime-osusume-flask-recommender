@@ -1,8 +1,5 @@
 numpy
 pandas
 scikit-learn
-pickle
-json
 flask
-serve
 gunicorn
