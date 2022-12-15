@@ -1,6 +1,5 @@
 numpy
 pandas
-os
 warnings
 sklearn
 sklearn
