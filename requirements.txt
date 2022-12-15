@@ -1,0 +1,11 @@
+numpy
+pandas
+os
+warnings
+sklearn
+sklearn
+pickle
+json
+flask
+serve
+gunicorn
