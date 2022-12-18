@@ -10,18 +10,18 @@ from urllib.request import urlopen
 
 
 def anime_recommend_api(user_input, rec_type):
-    # with open("similarity.pkl", "rb") as file:
-    #     similarity = pickle.load(file)
-    # with open("data.pkl", "rb") as file:
-    #     data = pickle.load(file)
+    with open("similarity.pkl", "rb") as file:
+        similarity = pickle.load(file)
+    with open("data.pkl", "rb") as file:
+        data = pickle.load(file)
 
     print('from serve.py')
     
-    data = bz2.BZ2File('data.pbz2', 'rb')
-    data = pickle.load(data)
+    # data = bz2.BZ2File('data.pbz2', 'rb')
+    # data = pickle.load(data)
     
-    similarity = bz2.BZ2File('similarity.pbz2', 'rb')
-    similarity = pickle.load(similarity)
+    # similarity = bz2.BZ2File('similarity.pbz2', 'rb')
+    # similarity = pickle.load(similarity)
 
     print(user_input)
     print(data[data["Name"] == user_input])
