@@ -15,6 +15,8 @@ def anime_recommend_api(user_input, rec_type):
     # with open("data.pkl", "rb") as file:
     #     data = pickle.load(file)
 
+    print('from serve.py')
+    
     data = bz2.BZ2File('data.pbz2', 'rb')
     data = pickle.load(data)
     
