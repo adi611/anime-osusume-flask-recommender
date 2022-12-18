@@ -1,5 +1,6 @@
 import json
 from flask import Flask, request
+from flask_cors import CORS
 from serve import anime_recommend_api
 
 # I've commented out the last import because it won't work in kernels,
@@ -7,6 +8,7 @@ from serve import anime_recommend_api
 
 # create an instance of Flask
 app = Flask(__name__)
+CORS(app)
 
 # load our pre-trained model & function
 # recommender = anime_recommend_api()
@@ -29,6 +31,8 @@ def extractpackages():
     print(type(input_data))
     print(input_data['name'], input_data['type'])
     print(type(input_data['name']), type(input_data['type']))
+    if input_data['type'] == "All":
+        input_data['type'] = None
     output_data = anime_recommend_api(input_data['name'], input_data['type'])
 
     # convert our dictionary into a .json file
